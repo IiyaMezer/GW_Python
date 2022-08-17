@@ -1,8 +1,9 @@
 import os
-clear = lambda: os.system('cls')
+
 
 
 def QuarterByPoint():
+    os.system('cls')
     x,y= input('Введите через запятую координаты X и Y: ').split(',')
     x = int(x)
     y = int(y)
@@ -18,7 +19,8 @@ def QuarterByPoint():
     elif x == 0 or y==0:
         print('Точка лежит на оси')
 
-def RangeBySquare():    
+def RangeBySquare():
+    os.system('cls')
     while True:
         Q= input('Введите четверть:')
         match Q:
@@ -38,6 +40,7 @@ def RangeBySquare():
                 print('Невереный ввод')
 
 def LenghtByPoint():
+    os.system('cls')
     x1,y1,z1= input('Введите через запятую координаты первой точки X,Y,Z: ').split(',')
     x1 = int(x1)
     y1 = int(y1)
@@ -53,14 +56,14 @@ def LenghtByPoint():
     pass
 
 while True:
-    
+    os.system('cls')
     print('Список заданий')
     print('1.Сообщить в какой четверти координатной плоскости или на какой оси находится точка с координатами Х и У')
     print('2.Указав номер четверти прямоугольной системы координат, показать допустимые значения координат для точек этой четверти')
     print('3.Найти расстояние между двумя точками пространства')
     print('0.Завершить работу')
     print('-----------------------------------------------------------------------------------------------------------------------')
-    task =input('Виберите задание: ')
+    task =input('Выберите задание: ')
 
     match task:
         case '1':
