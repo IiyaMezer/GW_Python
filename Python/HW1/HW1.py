@@ -10,8 +10,8 @@ def clrscr():
 def QuarterByPoint():
     clrscr()
     x,y= input('Введите через запятую координаты X и Y: ').split(',')
-    x = int(x)
-    y = int(y)
+    x = float(x)
+    y = float(y)
 
     if x > 0 and y > 0:
         print('I четверть')
