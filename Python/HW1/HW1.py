@@ -46,17 +46,9 @@ def RangeBySquare():
 
 def LenghtByPoint():
     clrscr()
-    x1,y1,z1= input('Введите через запятую координаты первой точки X,Y,Z: ').split(',')
-    x2,y2,z2= input('Введите через запятую координаты второй точки X,Y,Z: ').split(',')
-
-    x1 = float(x1)
-    y1 = float(y1)
-    z1 = float(z1)
-
-    x2 = float(x2)
-    y2 = float(y2)
-    z2 = float(z2)
-
+    x1,y1,z1= list(map(int, input('Введите через запятую координаты первой точки X,Y,Z: ').split(',')))
+    x2,y2,z2= list(map(int, input('Введите через запятую координаты первой точки X,Y,Z: ').split(',')))
+    
     l = float(((x2-x1)**2+(y2-y1)**2+(z2-z1)**2)**0.5)
     print(f'Расстояние равно: {l}')
 
