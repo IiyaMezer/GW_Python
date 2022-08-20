@@ -3,15 +3,17 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>de48f15a-c5c2-40f2-a3ae-4d4b2be937c5</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
-    <StartupFile>HW1.py</StartupFile>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>HW2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>HW1</Name>
+    <Name>HW_Python</Name>
     <RootNamespace>HW1</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|1|$(MSBuildProjectFullPath)</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,9 +24,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="clr.py" />
     <Compile Include="HW1.py" />
+    <Compile Include="HW2.py" />
   </ItemGroup>
   <ItemGroup>
+    <Interpreter Include="1\">
+      <Id>1</Id>
+      <Version>3.10</Version>
+      <Description>1 (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
     <Interpreter Include="env\">
       <Id>env</Id>
       <Version>3.10</Version>

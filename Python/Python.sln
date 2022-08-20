@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "HW1", "HW1\HW1.pyproj", "{DE48F15A-C5C2-40F2-A3AE-4D4B2BE937C5}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "HW_Python", "HW1\HW_Python.pyproj", "{DE48F15A-C5C2-40F2-A3AE-4D4B2BE937C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
