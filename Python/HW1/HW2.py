@@ -41,8 +41,8 @@ def Task3():
     if len(A) > 1:
        i = len(A) - 1
        while i > 0:
-           sel = random.randint(0, i)
-           A[i], A[sel] = A[sel], A[i]
+           rep = random.randint(0, i)
+           A[i], A[rep] = A[rep], A[i]
            i -= 1
     print(f'Массив после перетасовки: {A}')
 
