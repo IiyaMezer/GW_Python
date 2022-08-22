@@ -1,4 +1,5 @@
 ﻿import clr as c
+import random
 
 def factorial(n:int):
     res :int  = 1
@@ -29,6 +30,22 @@ def Task2():
     c.clrscr()
     N =int(input('Введите N: '))
     factorial(N)
+
+def Task3():
+    c.clrscr()
+    N =int(input('Введите N: '))
+    A= [None]*N
+    for i in range(len(A)):
+        A[i]= i
+    print(f'Массив до перетасовки: {A}')
+    if len(A) > 1:
+       i = len(A) - 1
+       while i > 0:
+           sel = random.randint(0, i)
+           A[i], A[sel] = A[sel], A[i]
+           i -= 1
+    print(f'Массив после перетасовки: {A}')
+
 
 
 while True:
