@@ -14,23 +14,35 @@ def Task1():
 
 def Task2():
     c.clrscr()
-    N =int(input('Введите N: '))
-    factorial(N)
+    A = list(map(int, input('Введите числа через запятую: ').split(',')))
+    print('Произведение пар массива: ')
+    for i in range(len(A)//2):
+        Mult=0
+        Mult = A[i]*A[len(A)-1-i]
+        print(Mult, end='; ')
+
 
 def Task3():
     c.clrscr()
-    N =int(input('Введите N: '))
-    A= [None]*N
+    
+    A= [1.5,2.13,4.16,5.32]
+    print(A)
+    Max = 0
+    Min = 0
     for i in range(len(A)):
-        A[i]= i
-    print(f'Массив до перетасовки: {A}')
-    if len(A) > 1:
-       i = len(A) - 1
-       while i > 0:
-           rep = random.randint(0, i)
-           A[i], A[rep] = A[rep], A[i]
-           i -= 1
-    print(f'Массив после перетасовки: {A}')
+        fValue = 0
+        intValue = int(A[i])
+        fValue = A[i] - intValue
+        if(fValue>Max):
+            Max = fValue
+    Min=Max
+    for i in range(len(A)):
+        fValue = 0
+        intValue = int(A[i])
+        fValue = A[i] - intValue
+        if(fValue<Min):
+            Min = fValue
+    print(round(Max - Min,3))
 
 
 
@@ -38,8 +50,8 @@ while True:
     c.clrscr()
     print('Список заданий')
     print('1.Сумма нечетных элементов массива')
-    print('2.Факториал по порядку')
-    print('3.Перемешивание списка')
+    print('2.Произведение пар чисел массива')
+    print('3.Разница между наменьшей и наибольшей дробной частью массива')
     print('0.Завершить работу')
     print('-----------------------------------------------------------------------------------------------------------------------')
     task =input('Выберите задание: ')
