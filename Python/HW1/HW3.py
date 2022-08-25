@@ -29,20 +29,36 @@ def Task3():
     print(A)
     Max = 0
     Min = 0
-    for i in range(len(A)):
+    for i in range(len(A)): #Ищем нибольшую дробную часть
         fValue = 0
         intValue = int(A[i])
         fValue = A[i] - intValue
         if(fValue>Max):
             Max = fValue
     Min=Max
-    for i in range(len(A)):
+    for i in range(len(A)): #Ищем наменьшую дробную часть
         fValue = 0
         intValue = int(A[i])
         fValue = A[i] - intValue
         if(fValue<Min):
             Min = fValue
-    print(round(Max - Min,3))
+    print('Ответ:',round(Max - Min,3))
+
+def Task4():
+    c.clrscr()
+    A= 16
+    print(bin(A))
+
+def Task5():
+    c.clrscr()
+    A= 16
+    print(A)
+    Bin = ''
+    while A > 0:
+        Bin += str(A%2)
+        A = A//2
+    print(Bin)
+
 
 
 
@@ -52,6 +68,8 @@ while True:
     print('1.Сумма нечетных элементов массива')
     print('2.Произведение пар чисел массива')
     print('3.Разница между наменьшей и наибольшей дробной частью массива')
+    print('4.Из десятичной в дробное')
+    print('5.Из десятичной в дробное "руками"')
     print('0.Завершить работу')
     print('-----------------------------------------------------------------------------------------------------------------------')
     task =input('Выберите задание: ')
@@ -63,6 +81,10 @@ while True:
             Task2()
         case '3':
             Task3()
+        case '4':
+            Task4()
+        case '5':
+            Task5()
         case '0':
             print('Звершение работы...')
             break
