@@ -1,5 +1,24 @@
 ﻿import clr as c
-import random
+
+def Nfib(n):
+    if n == 0:
+            return 0
+    elif n < 0:
+        if n == -2:
+            return -1
+        elif n == -1:
+            return 1
+        else:
+            return Nfib(n+2)-Nfib(n+1)
+    else:
+        if n == 1:
+            return 1
+        else:
+            return Nfib(n-1) + Nfib(n-2)
+
+
+
+
 
 
 def Task1():
@@ -59,6 +78,14 @@ def Task5():
         A = A//2
     print(Bin)
 
+def Task6():
+    c.clrscr()
+    n = 5
+    i =  - n
+    print('Негафибоначи:')
+    while i <= n :
+        print (i,'|',Nfib(i))
+        i +=1
 
 
 
@@ -70,6 +97,7 @@ while True:
     print('3.Разница между наменьшей и наибольшей дробной частью массива')
     print('4.Из десятичной в дробное')
     print('5.Из десятичной в дробное "руками"')
+    print('6.Негафибоначчи')
     print('0.Завершить работу')
     print('-----------------------------------------------------------------------------------------------------------------------')
     task =input('Выберите задание: ')
@@ -85,6 +113,8 @@ while True:
             Task4()
         case '5':
             Task5()
+        case '6':
+            Task6()
         case '0':
             print('Звершение работы...')
             break
