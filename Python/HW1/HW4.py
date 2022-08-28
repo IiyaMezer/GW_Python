@@ -12,15 +12,32 @@ def PrimeFactors(n):
             d +=1
     return PM
 
+def GetUniqElements (A):
+    UniqueList=list()
+    for i in A:
+        if A[i] in UniqueList:
+            continue
+        else:
+           UniqueList.append(A[i])
+    return UniqueList
+
+
+
 def Task1():
     c.clrscr()
     n = int(input("Введите целое число для разложения его на простыe множители: "))
-    print(f"Простые множители для числа {n} : {PrimeFactors(n)}")
+    print(f"Простые множители для {n} : {PrimeFactors(n)}")
 
 def Task2():
     c.clrscr()
-    N =int(input('Введите N: '))
-    factorial(N)
+    N = 15
+    A= [None]*N
+    for i in range(len(A)):
+        A[i]= random.randint(0, 10) #Специально обьявил массив из 15 элементов, а пределы генерации числа до 10, чтобы получить гарантированно повторяющиеся значения.
+    print (f"Исходный массив: {A}")
+    print (f"Только уникальные элементы массива: {GetUniqElements(A)}")
+
+
 
 def Task3():
     c.clrscr()
@@ -43,7 +60,7 @@ while True:
     c.clrscr()
     print('Список заданий')
     print('1.Разложение на простые множители')
-    print('2.Факториал по порядку')
+    print('2.Уникальные элементы массива')
     print('3.Перемешивание списка')
     print('0.Завершить работу')
     print('-----------------------------------------------------------------------------------------------------------------------')
