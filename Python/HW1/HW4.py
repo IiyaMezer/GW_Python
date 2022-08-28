@@ -1,4 +1,5 @@
 ﻿import clr as c
+import os
 import random as R
 
 def PrimeFactors(n):
@@ -63,10 +64,12 @@ def Task3():
     N =int(input('Введите k: '))
     Poly ="".join(GeneratePolynome(N))
     print(f'Сгенерированный полином:{Poly}')
-    f = open('Task03.txt','w')
+    fn = 'Task03.txt'
+    f = open(fn,'w')
     f.write(Poly)
+    print(f'Сгенерированный полином записан в файле:{os.path.abspath(fn)}')
     f.close
-    print(f'Сгенерированный полином записан в рабочей директории в файле:{f.name}')
+
 
 
 
