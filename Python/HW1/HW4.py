@@ -1,5 +1,5 @@
 ﻿import clr as c
-import random
+import random as R
 
 def PrimeFactors(n):
     PM=list()       #PrimeFactors
@@ -21,6 +21,25 @@ def GetUniqElements (A):
            UniqueList.append(A[i])
     return UniqueList
 
+def GeneratePolynome (k):
+    Polynome = list ()
+    i=k
+    while i >= 0:
+        n=R.randint(0,100)
+        if n==0:
+            i -=1
+            continue
+        else:
+            if i == 0:
+                Polynome.append((f'{n}'))
+            elif i ==1:
+                Polynome.append((f'{n}*x+'))
+            else:
+                Polynome.append((f'{n}*x^{i}+'))
+            i -=1
+    return Polynome
+
+
 
 
 def Task1():
@@ -33,7 +52,7 @@ def Task2():
     N = 15
     A= [None]*N
     for i in range(len(A)):
-        A[i]= random.randint(0, 10) #Специально обьявил массив из 15 элементов, а пределы генерации числа до 10, чтобы получить гарантированно повторяющиеся значения.
+        A[i]= R.randint(0, 10) #Специально обьявил массив из 15 элементов, а пределы генерации числа до 10, чтобы получить гарантированно повторяющиеся значения.
     print (f"Исходный массив: {A}")
     print (f"Только уникальные элементы массива: {GetUniqElements(A)}")
 
@@ -41,18 +60,15 @@ def Task2():
 
 def Task3():
     c.clrscr()
-    N =int(input('Введите N: '))
-    A= [None]*N
-    for i in range(len(A)):
-        A[i]= i
-    print(f'Массив до перетасовки: {A}')
-    if len(A) > 1:
-       i = len(A) - 1
-       while i > 0:
-           rep = random.randint(0, i)
-           A[i], A[rep] = A[rep], A[i]
-           i -= 1
-    print(f'Массив после перетасовки: {A}')
+    N =int(input('Введите k: '))
+    Poly ="".join(GeneratePolynome(N))
+    print(f'Сгенерированный полином:{Poly}')
+    f = open('Task03.txt','w')
+    f.write(Poly)
+    f.close
+    print(f'Сгенерированный полином записан в рабочей директории в файле:{f.name}')
+
+
 
 
 
@@ -61,7 +77,7 @@ while True:
     print('Список заданий')
     print('1.Разложение на простые множители')
     print('2.Уникальные элементы массива')
-    print('3.Перемешивание списка')
+    print('3.Многочлен степени k')
     print('0.Завершить работу')
     print('-----------------------------------------------------------------------------------------------------------------------')
     task =input('Выберите задание: ')
