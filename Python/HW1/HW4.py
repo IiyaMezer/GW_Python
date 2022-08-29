@@ -51,18 +51,18 @@ def Task1():
 def Task2():
     c.clrscr()
     N = 15
-    A= [None]*N
-    for i in range(len(A)):
-        A[i]= R.randint(0, 10) #Специально обьявил массив из 15 элементов, а пределы генерации числа до 10, чтобы получить гарантированно повторяющиеся значения.
-    print (f"Исходный массив: {A}")
-    print (f"Только уникальные элементы массива: {GetUniqElements(A)}")
+    my_list= [None]*N
+    for i in range(len(my_list)):
+        my_list[i]= R.randint(0, 10) #Специально обьявил массив из 15 элементов, а пределы генерации числа до 10, чтобы получить гарантированно повторяющиеся значения.
+    print (f"Исходный массив: {my_list}")
+    print (f"Только уникальные элементы массива: {GetUniqElements(my_list)}")
 
 
 
 def Task3():
     c.clrscr()
-    N =int(input('Введите k: '))
-    Poly ="".join(GeneratePolynome(N))
+    num =int(input('Введите k: '))
+    Poly ="".join(GeneratePolynome(num))
     print(f'Сгенерированный полином:{Poly}')
     fn = 'Task03.txt'
     f = open(fn,'w')
