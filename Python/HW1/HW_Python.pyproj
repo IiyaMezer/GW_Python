@@ -5,7 +5,7 @@
     <ProjectGuid>de48f15a-c5c2-40f2-a3ae-4d4b2be937c5</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>HW2.py</StartupFile>
+    <StartupFile>HW3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,6 +27,7 @@
     <Compile Include="clr.py" />
     <Compile Include="HW1.py" />
     <Compile Include="HW2.py" />
+    <Compile Include="HW3.py" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="1\">
