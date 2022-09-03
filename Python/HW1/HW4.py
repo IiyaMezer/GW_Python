@@ -75,6 +75,7 @@ def Task3():
 
 
 
+
 while True:
     c.clrscr()
     print('Список заданий')
