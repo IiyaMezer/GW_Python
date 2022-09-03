@@ -1,4 +1,4 @@
-﻿import clr as c
+﻿import Utils.clr as c
 import random
 
 def factorial(n:int):
