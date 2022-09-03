@@ -1,5 +1,4 @@
-import sys
-
 import Utils.clr as C
 
-open("Test.txt", )
+fn = "TeslFIle.txt"
+f = open(fn, 'w')
