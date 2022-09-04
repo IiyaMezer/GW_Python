@@ -1,6 +1,6 @@
 import clr
 clr.clrscr()
-#TODO интеллект у бота + просчет ходов для игрока 1
+
 def set_max_candy(x, y):
     if x < y:
         y = x
@@ -15,7 +15,7 @@ the_last_turn = 0  # Переменная для определния после
 max_candy_per_turn = int(28)
 while candy_current > 0:
     p_one_turn = int(
-        input(f"Игрок 1, сколько конфет хотите забрать?(0...{set_max_candy(candy_current, max_candy_per_turn)})"))
+        input(f"Игрок 1, сколько конфет хотите забрать?(1...{set_max_candy(candy_current, max_candy_per_turn)})"))
     candy_current -= p_one_turn
     print(f"Конфет осталось: {candy_current}")
     the_last_turn = 1
@@ -23,7 +23,7 @@ while candy_current > 0:
     if candy_current == 0:
         break
     p_two_turn = int(
-        input(f"Игрок 2, сколько конфет хотите забрать?(0...{set_max_candy(candy_current, max_candy_per_turn)})"))
+        input(f"Игрок 2, сколько конфет хотите забрать?(1...{set_max_candy(candy_current, max_candy_per_turn)})"))
     candy_current -= p_two_turn
     print(f"Конфет осталось: {candy_current}")
     the_last_turn = 2

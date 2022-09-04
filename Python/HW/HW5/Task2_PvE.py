@@ -2,7 +2,7 @@ import clr
 from random import randint
 clr.clrscr()
 
-#TODO интеллект у бота + просчет ходов для игрока 1
+
 def set_max_candy(x, y):
     if x < y:
         y = x
@@ -24,7 +24,10 @@ while candy_current > 0:
 
     if candy_current == 0:
         break
-    bot_turn = randint(0, set_max_candy(candy_current, max_candy_per_turn))
+    # bot_turn = randint(1, set_max_candy(candy_current, max_candy_per_turn))
+    bot_turn = candy_current % (set_max_candy(candy_current, max_candy_per_turn)+1)
+    if bot_turn == 0:
+        bot_turn = 1
     candy_current -= bot_turn
     print(f"Бот забирает {bot_turn} конфет")
     print(f"Конфет осталось: {candy_current}")
