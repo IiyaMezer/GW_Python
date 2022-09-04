@@ -10,7 +10,7 @@ list_before_remove = f.readlines()
 f.close
 
 
-
+# Удаляем "абв" построчно.
 list_after_remove = []
 i = 0
 for i in range(len(list_before_remove)):
