@@ -1,51 +1,51 @@
 ﻿import Utils.clr as c
 import random
 
-def factorial(n:int):
-    res :int  = 1
-    for i in range(1, n+1):
+
+def factorial(n: int):
+    res: int = 1
+    for i in range(1, n + 1):
         res *= i
-        print(res, end='; ')
+        print(res, end = '; ')
 
 
 def Task1():
     c.clrscr()
-    #Разделяем дробное число на чписок из двух элментов
-    A = list(map(int, input('Введите число, десячисную часть сделует разделить запятой: ').split(',')))
+    # Разделяем дробное число на чписок из двух элментов
+    a = list(map(int, input('Введите число, десячисную часть сделует разделить запятой: ').split(',')))
 
-    a = A[0]
-    b = A[1]
+    a = a[0]
+    b = a[1]
 
     i: int = 0
-    while (a != 0): # складываем цифры целой части
-     i = i + (a % 10)
-     a = a // 10
+    while a != 0:  # складываем цифры целой части
+        i = i + (a % 10)
+        a = a // 10
 
-    while (b != 0): # складываем цифры дробной части
-     i = i + (b % 10)
-     b = b // 10
+    while b != 0:  # складываем цифры дробной части
+        i = i + (b % 10)
+        b = b // 10
     print("Произведение цифр равно:", i)
+
 
 def Task2():
     c.clrscr()
-    N =int(input('Введите N: '))
-    factorial(N)
+    n = int(input('Введите n: '))
+    factorial(n)
+
 
 def Task3():
     c.clrscr()
-    N =int(input('Введите N: '))
-    A= [None]*N
-    for i in range(len(A)):
-        A[i]= i
-    print(f'Массив до перетасовки: {A}')
-    if len(A) > 1:
-       i = len(A) - 1
-       while i > 0:
-           rep = random.randint(0, i)
-           A[i], A[rep] = A[rep], A[i]
-           i -= 1
-    print(f'Массив после перетасовки: {A}')
-
+    n = int(input('Введите n: '))
+    a = [i for i in range(1,n+1)]
+    print(f'Массив до перетасовки: {a}')
+    if len(a) > 1:
+        i = len(a) - 1
+        while i > 0:
+            rep = random.randint(0, i)
+            a[i], a[rep] = a[rep], a[i]
+            i -= 1
+    print(f'Массив после перетасовки: {a}')
 
 
 while True:
@@ -55,8 +55,10 @@ while True:
     print('2.Факториал по порядку')
     print('3.Перемешивание списка')
     print('0.Завершить работу')
-    print('-----------------------------------------------------------------------------------------------------------------------')
-    task =input('Выберите задание: ')
+    print(
+        "-----------------------------------------------------------------------------------------------------------------------"
+    )
+    task = input('Выберите задание: ')
 
     match task:
         case '1':
@@ -70,5 +72,3 @@ while True:
             break
         case _:
             print('Неизветсная команда')
-
-

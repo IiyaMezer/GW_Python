@@ -7,7 +7,7 @@ def clrscr():
         os.system('cls')
         
 
-def QuarterByPoint():
+def quarter_py_point():
     clrscr()
     x,y= input('Введите через запятую координаты X и Y: ').split(',')
     x = float(x)
@@ -24,7 +24,7 @@ def QuarterByPoint():
     elif x == 0 or y==0:
         print('Точка лежит на оси')
 
-def RangeBySquare():
+def range_by_square():
     clrscr()
     while True:
         Q= input('Введите четверть римской цифрой:')
@@ -44,7 +44,7 @@ def RangeBySquare():
             case _:
                 print('Невереный ввод')
 
-def LenghtByPoint():
+def lenght_by_point():
     clrscr()
     x1,y1,z1= list(map(int, input('Введите через запятую координаты первой точки X,Y,Z: ').split(',')))
     x2,y2,z2= list(map(int, input('Введите через запятую координаты первой точки X,Y,Z: ').split(',')))
@@ -65,11 +65,11 @@ while True:
 
     match task:
         case '1':
-            QuarterByPoint()
+            quarter_py_point()
         case '2':
-            RangeBySquare()
+            range_by_square()
         case '3':
-            LenghtByPoint()
+            lenght_by_point()
         case '0':
             print('Звершение работы...')
             break
