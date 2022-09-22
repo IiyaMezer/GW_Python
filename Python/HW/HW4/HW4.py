@@ -1,9 +1,9 @@
-﻿import clr as c
+﻿import Utils.clr as c
 import os
 import random as R
 
-def PrimeFactors(n):
-    PM=list()       #PrimeFactors
+def prime_factors(n):
+    PM=list()
     d=2
     while (d <= n):
         if(n % d) == 0:
@@ -13,7 +13,7 @@ def PrimeFactors(n):
             d +=1
     return PM
 
-def GetUniqElements (A):
+def get_uniq_elements (A):
     UniqueList=list()
     for i in A:
         if A[i] in UniqueList:
@@ -22,7 +22,7 @@ def GetUniqElements (A):
            UniqueList.append(A[i])
     return UniqueList
 
-def GeneratePolynome (k):
+def generate_polynome (k):
     Polynome = list ()
     i=k
     while i >= 0:
@@ -46,7 +46,7 @@ def GeneratePolynome (k):
 def Task1():
     c.clrscr()
     n = int(input("Введите целое число для разложения его на простыe множители: "))
-    print(f"Простые множители для {n} : {PrimeFactors(n)}")
+    print(f"Простые множители для {n} : {prime_factors(n)}")
 
 def Task2():
     c.clrscr()
@@ -55,14 +55,14 @@ def Task2():
     for i in range(len(my_list)):
         my_list[i]= R.randint(0, 10) #Специально обьявил массив из 15 элементов, а пределы генерации числа до 10, чтобы получить гарантированно повторяющиеся значения.
     print (f"Исходный массив: {my_list}")
-    print (f"Только уникальные элементы массива: {GetUniqElements(my_list)}")
+    print (f"Только уникальные элементы массива: {get_uniq_elements(my_list)}")
 
 
 
 def Task3():
     c.clrscr()
     num =int(input('Введите k: '))
-    Poly ="".join(GeneratePolynome(num))
+    Poly ="".join(generate_polynome(num))
     print(f'Сгенерированный полином:{Poly}')
     fn = 'Task03.txt'
     f = open(fn,'w')
